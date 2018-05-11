@@ -1,5 +1,7 @@
-<ul>
+<h3>Existing profile:</h3>
+<ul class="list" >
 	<li *ngFor="let person of personList, let i = index">
+	
 		<p>Name:{{person.firstName}} {{person.lastName}}</p>
 		<p>
 			<button routerLink="/detail/{{person.id}}">modify</button>
@@ -7,3 +9,7 @@
 		</p>
 	</li>
 </ul>
+<h3>Add new profile:</h3>
+<button routerLink='/detail/0'>Add Person</button>
+<h3>Log out:</h3>
+<button routerLink='/login'>Log out</button>

@@ -1,0 +1,39 @@
+<div class="container">
+	<h1>AddUser</h1>
+
+	<form>
+
+		<div class="form-group">
+
+			<label for="name1">Name</label> <input id="name1" name="name1"
+				class="form-control" required minlength="4" [(ngModel)]="username"
+				#name1="ngModel">
+			<div *ngIf="name1.invalid && (name1.dirty || name1.touched)"
+				class="alert alert-danger">
+
+				<div *ngIf="name1.errors.required">Username is required.</div>
+				<div *ngIf="name1.errors.minlength">Username must be at least
+					4 characters long.</div>
+
+
+			</div>
+		</div>
+		<div>
+			<label for="password1">Password</label> <input type="password"
+				id="password1" name="password1" class="form-control" required
+				minlength="4" [(ngModel)]="password" #password1="ngModel">
+			<div
+				*ngIf="password1.invalid && (password1.dirty || password1.touched)"
+				class="alert alert-danger">
+
+				<div *ngIf="password1.errors.required">Password is required.</div>
+				<div *ngIf="password1.errors.minlength">Password must be at
+					least 4 characters long.</div>
+			</div>
+
+		</div>
+		<button type="submit" class="btn btn-default" (click)="addUser()">Submit</button>
+
+	</form>
+
+</div>

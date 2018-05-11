@@ -9,6 +9,9 @@ import { PersonService } from './person.service';
 import { DetailComponent } from './detail/detail.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { UserlistService } from './userlist.service';
+import { NewUserComponent } from './new-user/new-user.component';
+import { BsDropdownModule, TooltipModule, ModalModule } from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -16,14 +19,18 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     ListComponent,
     DetailComponent,
-    LoginComponent
+    LoginComponent,
+    NewUserComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
-  providers: [PersonService],
+  providers: [PersonService, UserlistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,45 +1,39 @@
 <div *ngIf="id>0;else other_content">
-	<p>F
-		First Name:
-		<input type="text" [(ngModel)]="person.firstName">
+	<p>
+		First Name: <input type="text" [(ngModel)]="person.firstName">
 	</p>
 </div>
 <ng-template #other_content>
-	<h1>Create a new profile</h1>
-	<p>
-		First Name:
-		<input type="text" [(ngModel)]="firstName">
-	</p>
+<h1>Create a new profile</h1>
+<p>
+	First Name: <input type="text" [(ngModel)]="firstName">
+</p>
 </ng-template>
 
 
 
 <div *ngIf="id>0;else other_content2">
 	<p>
-		Last Name:
-		<input type="text" [(ngModel)]="person.lastName" required >
+		Last Name: <input type="text" [(ngModel)]="person.lastName" required>
 	</p>
 </div>
 <ng-template #other_content2>
-	<p>
-		First Name:
-		<input type="text" [(ngModel)]="lastName">
-	</p>	
+<p>
+	First Name: <input type="text" [(ngModel)]="lastName">
+</p>
 </ng-template>
 
 
 
 <div *ngIf="id>0;else other_content3">
 	<p>
-		Age:
-		<input type="text" [(ngModel)]="person.age">
+		Age: <input type="text" [(ngModel)]="person.age">
 	</p>
 </div>
 <ng-template #other_content3>
-		<p>
-		Age:
-		<input type="text" [(ngModel)]="age">
-	</p>
+<p>
+	Age: <input type="text" [(ngModel)]="age">
+</p>
 </ng-template>
 
 
@@ -47,21 +41,19 @@
 
 <div *ngIf="id>0;else other_content4">
 	<p>
-		City:
-		<input type="text" [(ngModel)]="person.city">
+		City: <input type="text" [(ngModel)]="person.city">
 	</p>
 </div>
 <ng-template #other_content4>
-	<p>
-		City:
-		<input type="text" [(ngModel)]="city">
-	</p>
+<p>
+	City: <input type="text" [(ngModel)]="city">
+</p>
 </ng-template>
 
 <div *ngIf="id<1">
-<button (click)="addPerson()">add new account</button>
+	<button (click)="addPerson()">Add Person</button>
 </div>
-
+<br>
 <button (click)="goBack()">back</button>
 
 
